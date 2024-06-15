@@ -1,86 +1,86 @@
-# Centos 7 64-bit deployment
+# Centos 7 64位 部署
 
 ---
 
-Enter the administrator account
+进入管理员账号
 >su -
 >yum update
 >yum upgrade
 
-Install system dependencies
+安装系统依赖
 
 > yum -y install gcc-c++
 
-Install Python dependencies
+安装Python依赖
 
 > yum install zlib-devel xz-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel libffi-devel gcc make
 
-Install Node
+安装Node
 
-> wget https://nodejs.org/dist/v14.19.3/node-v14.19.3-linux-x64.tar.gz
-> tar zvxf node-v14.19.3-linux-x64.tar.gz -C /usr/local
+> wget https://nodejs.org/dist/v14.18.3/node-v14.18.3-linux-x64.tar.gz
+> tar zvxf node-v14.18.3-linux-x64.tar.gz -C /usr/local
 
-Environment variable settings
+环境变量设置
 
-> echo '''export NODE_HOME=/usr/local/node-v14.19.3-linux-x64 export PATH=$PATH:$NODE_HOME/bin export NODE_PATH=$NODE_HOME/lib/node_modules''' /etc/profile
+> echo '''export NODE_HOME=/usr/local/node-v14.18.3-linux-x64 export PATH=$PATH:$NODE_HOME/bin export NODE_PATH=$NODE_HOME/lib/node_modules''' /etc/profile
 
-Make environment variables take effect immediately
+使环境变量立即生效
 
 >source /etc/profile
 
-Soft connection Node and NPM
+软连接Node和NPM
 
-> ln -sf /usr/local/node-v14.19.3-linux-x64/bin/node /usr/bin/node
-> ln -s /usr/local/node-v14.19.3-linux-x64/bin/npm /usr/bin/npm
+> ln -sf /usr/local/node-v14.18.3-linux-x64/bin/node /usr/bin/node
+> ln -s /usr/local/node-v14.18.3-linux-x64/bin/npm /usr/bin/npm
 
-Verify that node is installed successfully
+验证node是否安装成功
 
 > node -v
 
-Verify that npm is installed successfully
+验证npm是否安装成功
 
 > npm -v
 
-upgrade npm
+升级npm
 
 > npm install npm -g
 
-install yarn
+安装yarn
 
 > npm install yarn -g
 
-install quasar
+安装quasar
 
 > npm install @quasar/cli -g
 
-install cordova
+安装cordova
 
 > npm install cordova -g
 
-check quasar version
-> quasar -v
+检查quasar版本
+> quasar -v 
 
-Upgrade sqlite3 version
-> It is recommended to do this step before installing python3.9.5
->Download the source code
+升级sqlite3版本
+>建议在安装python3.9.5前就完成这一步
+>下载源码
 >wget https://www.sqlite.org/2019/sqlite-autoconf-3300100.tar.gz
-> unzip, compile
+>解压，编译
 >tar zxvf sqlite-autoconf-3290000.tar.gz
 >cd sqlite-autoconf-3290000/
-> ./configure --prefix=/usr/local
+>./configure --prefix=/usr/local
 >make && make install
->Replace system low version sqlite3
+>替换系统低版本sqlite3
 >mv /usr/bin/sqlite3 /usr/bin/sqlite3_old
 >ln -s /usr/local/bin/sqlite3 /usr/bin/sqlite3
 >echo "/usr/local/lib" > /etc/ld.so.conf.d/sqlite3.conf
 >ldconfig
 >sqlite3 -version
 
-Check python version
+查看python版本
 
 > python3
 
-- If the python version is not 3.9.5, please execute the following command
+- 如果python版本不是3.9.5，请执行一下命令
 
 > cd /usr/src
 > wget https://www.python.org/ftp/python/3.9.5/Python-3.9.5.tgz
@@ -93,78 +93,90 @@ Check python version
 > mv /usr/bin/pip3 /usr/bin/pip3.bak
 > ln -s /usr/local/bin/pip3.9 /usr/bin/pip3
 
-Check pip3 list is installed successfully
+查看pip3 是否安装成功
 
 > pip3 list
 
-install git
+配置pip3从阿里云上下载
+
+> vim ~/.pip/pip.conf
+
+- 输入以下内容
+
+> [global]
+> index-url = http://mirrors.aliyun.com/pypi/simple/
+> trusted-host = mirrors.aliyun.com
+
+安装git
 
 > yum install git
 
-Download GreaterWMS from gitee
+下载 GreaterWMS 从 gitee
 
-> git clone https://github.com/Singosgu/GreaterWMS.git
+> git clone https://gitee.com/Singosgu/GreaterWMS.git// 
 
-Elevate GreaterWMS Folder
+提权 GreaterWMS 文件夹
 
 > chmod -R 755 GreaterWMS
 
-Go to the GreaterWMS folder
+进入GreaterWMS文件夹
 
 > cd GreaterWMS>pip3 install -r requirements.txt
 
-- Sometimes, there will be problems when you install these libraries because of the python3 version, don't worry, pip3 install the wrong library.
+- 有些时候，你安装这些库会出问题，是因为python3版本的问题，不用担心，pip3 install 出错的库就可以了.
+
+> /usr/local/bin/daphne -p 8008 greaterwms.asgi:application
+- 现在打开浏览器，输入"127.0.0.1:8008"，你会看到500错误，恭喜你，你已经可以正常部署接下来的事情了
+
+回到GreaterWMS文件夹
 
 > Ctrl + C
 
-database generation
+数据库生成
 
-> python3 manage.py makemigrations // database generation
+> python3 manage.py makemigrations // 数据库生成
 
-database migration
+数据库迁移
 
-> python3 manage.py migrate // database migration
+> python3 manage.py migrate // 数据库迁移
 
-> /usr/local/bin/daphne -b 0.0.0.0 -p 8008 greaterwms.asgi:application
+> /usr/local/bin/daphne -p 8008 greaterwms.asgi:application
 
-- Now open your browser, type "your external ip :8008" and you will see the project is running
+- 现在打开浏览器，输入"127.0.0.1:8008"，你会看到项目已经运行了
 
-Go back to the GreaterWMS folder
+输入 "127.0.0.1:8008/myip", 你会得到你的内网IP，一定记住它 
+
+回到GreaterWMS文件夹
 
 > Ctrl + C
 > cd templates
 
-Wait for the Yarn installation to complete. In fact, you can also npm install it, but it will be slower
-Change yarn to domestic source
+等待Yarn安装完成，其实你也可以npm install ，就是会慢一点
+更改yarn为国内源
+> yarn config set registry https://registry.npm.taobao.org/
 > /usr/local/bin/yarn install
 
-Start the front-end page with the quasar command
+使用quasar命令启动前端页面
 
 > /usr/local/bin/quasar d
 
-- The front end will send a request to "127.0.0.1:8008", here we just check if the project can run
+- 前端会向 "127.0.0.1:8008"发请求, 在这里我们只是看下项目是不是可以运行
 
-Go back to the baseurl folder
+退回到templates文件夹
 
-> Ctrl + C // go back to templates folder
-> ## Example changes before
-> const baseurl = 'http://127.0.0.1:8008/'
-> const wsurl = 'ws://127.0.0.1:8008/'
-> 
-> ## Example changes after
-> const baseurl = 'https://{ your external ip }/'
-> const wsurl = 'ws://{ your external ip }/'
+> Ctrl + C // 退回到templates文件夹
 
-- Press Esc and type ":wq" to save changes
-- Now, you know how to deploy and modify the request address
+- 从2.0.19版本以后，优化了请求地址修改方式，直接修改templates/dist/spa/statics/baseurl.js，中的baseurl和wsurl，就可以成功更改前端请求地址，不再需要做下面的quasar build打包工作。如果需要修改前端内容，则还需要修改templates/public/statics/baseurl.js中的baseurl和wsurl，然后重新使用quasar build进行打包，更改 "127.0.0.1" 成你的内网IP, baseurl 是http请求地址 , ws 是 websocket请求地址
+- 按下 Esc 然后输入 ":wq" 去保存修改
+- 现在，你已经知道怎么部署和修改请求地址了
 
-back to templates
-> ## you should build it again
-> cd templates
+需要对修改进行重新打包
+
 > /usr/local/bin/quasar build
 
-Go back to the GreaterWMS folder
+回到GreaterWMS文件夹
 
 > cd ..
 > /usr/local/bin/daphne -b 0.0.0.0 -p 8008 greaterwms.asgi:application
-- Now, open the browser, type "your external IP: 8008", you can see the project is running
+
+- 现在，打开浏览器，输入 "你的外网IP:8008"，你可以看到项目已经运行了

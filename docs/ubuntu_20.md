@@ -1,137 +1,141 @@
-# Ubuntu 20 64-bit deployment
+# Ubuntu 20 64位 部署
 
 ---
 
 > sudo apt update
 > sudo apt upgrade
 
-install vim
+安装 vim
 
 > sudo apt install vim
 
-Enter the Home directory
+进入Home目录
 
 > cd ~
 
-Add "alias vi=vim" to bashrc
+把 "alias vi=vim" 加进 bashrc
 
->vim.bashrc
+>vim .bashrc
 
-Refresh takes effect bashrc
+刷新生效bashrc
 
 >source .bashrc
 
-install git
+安装git
 
 >sudo apt install git
 
-Download GreaterWMS from gihub
+下载 GreaterWMS 从 gihub
 
 >sudo git clone https://gitee.com/Singosgu/GreaterWMS.git
 
-install nodejs
+安装nodejs
 
 >wget https://nodejs.org/dist/v14.18.3/node-v14.18.3-linux-x64.tar.gz
 > tar zvxf node-v14.18.3-linux-x64.tar.gz -C /usr/local
 > echo ''' export NODE_HOME=/usr/local/node-v14.18.3-linux-x64 export PATH=$PATH:$NODE_HOME/bin export NODE_PATH=$NODE_HOME/lib/node_modules''' /etc/profile
 
-Make environment variables take effect immediately
+使环境变量立即生效
 
->source /etc/profile
+>source /etc/profile 
 >sudo ln -sf /usr/local/node-v14.18.3-linux-x64/bin/node /usr/bin/node
 >sudo ln -s /usr/local/node-v14.18.3-linux-x64/bin/npm /usr/bin/npm
 
-Verify that node is installed successfully
+验证node是否安装成功
 
 >sudo node -v
 
-Verify that npm is installed successfully
+验证npm是否安装成功
 
 >sudo npm -v
 
-- After this step is completed, you need to restart your Terminal, otherwise the upgrade will not take effect
+- 这步完成以后，你需要重新启动你的Terminal，要不然升级不生效
 
 > sudo npm install npm -g
 > sudo npm install yarn -g
 > sudo npm install -g @quasar/cli
 
-Make sure your python version is above 3.8, in principle 3.6 is also possible, but there will be some problems with installing the library
+确定你的python版本是3.8以上版本，原则上3.6也是可以的，但是安装库会有些问题
 
 > python3
 
-Make sure you have pip3 installed
+确定你是否安装有 pip3
 
 > pip3 list
 
-If you don't have pip3, install it
+如果你没有pip3 ，就安装一下
 
 > sudo apt install python3-pip
 
-Check if the installation was successful
+检查下是否安装成功
 
 > pip3 list
 
-Elevate GreaterWMS Folder
+提权 GreaterWMS 文件夹
 
 >sudo chmod -R 755 GreaterWMS
 
 > cd GreaterWMS
 > sudo pip3 install -r requirements.txt
 
-Sometimes, you will have problems installing these libraries because of the python3 version. Don't worry, just sudo pip3 install the wrong library.
+有些时候，你安装这些库会出问题，是因为python3版本的问题，不用担心，sudo pip3 install 出错的库就可以了.
 
 > sudo daphne -p 8008 greaterwms.asgi:application
-> Now open the browser, enter "127.0.0.1:8008", you will see a 500 error, congratulations, you can deploy the next thing normally
+> 现在打开浏览器，输入"127.0.0.1:8008"，你会看到500错误，恭喜你，你已经可以正常部署接下来的事情了
 
-Go back to the GreaterWMS folder
+回到GreaterWMS文件夹
 
 > Ctrl + C
 
-Database generation and migration
+数据库生成和迁移
 
 > sudo python3 manage.py makemigrations
 > sudo python3 manage.py migrate
 
-Start GreaterWMS
+启动GreaterWMS
 
 > sudo daphne -p 8008 greaterwms.asgi:application
-- Now open your browser, type "127.0.0.1:8008" and you will see the project is running
-- Enter "127.0.0.1:8008/myip", you will get your intranet IP, be sure to remember it
+- 现在打开浏览器，输入"127.0.0.1:8008"，你会看到项目已经运行了
+- 输入 "127.0.0.1:8008/myip", 你会得到你的内网IP，一定记住它 
 
-Go back to the GreaterWMS folder
+回到GreaterWMS文件夹
 
 > Ctrl + C
 
-Go to templates folder
+进入 templates 文件夹
 
 > cd templates
 
-Wait for the Yarn installation to complete. In fact, you can also sudo npm install , but it will be slower
+更改yarn为国内源
+
+> sudo yarn config set registry https://registry.npm.taobao.org/
+
+等待Yarn安装完成，其实你也可以sudo npm install ，就是会慢一点
 
 > sudo yarn install
 
-Start the front-end page with the quasar command
+使用quasar命令启动前端页面
 
 > sudo quasar d
 
-- The front end will send a request to "127.0.0.1:8008", here we just check if the project can run
+- 前端会向 "127.0.0.1:8008"发请求, 在这里我们只是看下项目是不是可以运行
 
-- Since version 2.0.19, the modification method of the request address has been optimized. By directly modifying the baseurl and wsurl in templates/dist/spa/statics/baseurl.js, you can successfully change the front-end request address, and you no longer need to do the following quasar build packaging works.
-- If you need to modify the front-end content, you also need to modify the baseurl and wsurl in templates/public/statics/baseurl.js, and then re-use quasar build for packaging
+- 从2.0.19版本以后，优化了请求地址修改方式，直接修改templates/dist/spa/statics/baseurl.js，中的baseurl和wsurl，就可以成功更改前端请求地址，不再需要做下面的quasar build打包工作。
+- 如果需要修改前端内容，则还需要修改templates/public/statics/baseurl.js中的baseurl和wsurl，然后重新使用quasar build进行打包
 
->Press Esc and type ":wq" to save changes
->Now, you know how to deploy and modify the request address
+>按下 Esc 然后输入 ":wq" 去保存修改
+>现在，你已经知道怎么部署和修改请求地址了
 
-Modifications need to be repackaged
+需要对修改进行重新打包
 
 > sudo quasar build
 
-Go back to the GreaterWMS folder
+回到GreaterWMS文件夹
 
 > cd ..
 
-Restart GreaterWMS
+重新启动GreaterWMS
 
 > sudo daphne -b 0.0.0.0 -p 8008 greaterwms.asgi:application
 
- Now, open a browser and enter "Intranet IP: 8008"
+- 现在，打开浏览器，输入"内网IP:8008"

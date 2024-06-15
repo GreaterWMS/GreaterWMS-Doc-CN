@@ -1,61 +1,80 @@
-# Android environment construction
+# 安卓环境搭建
 
 ---
+node版本要求
+> node v14.19.3
 
-Install JDK1.8
+app源码项目地址
+> 下载地址: https://gitee.com/Singosgu/scanner
 
-> Download address: https://data.56yhz.com/media/windows/jdk-8u281-windows-x64.exe
+安装JDK1.8
 
-- Just keep on next
+> 下载地址：https://www.56yhz.com/media/windows/jdk-8u281-windows-x64.exe 
 
-Install the AndRoid Studio software
+- 一直next即可
 
-> The download address is: https://developer.android.google.cn/studio/
+安装Cordova插件
+- 项目目录下运行npm install -g cordova
 
-- Always next, the first time you run it, you need to install the SDK, you can choose all
+安装AndRoid Studio软件
 
-> ![](https://data.56yhz.com/media/windows/1.jpeg)](https://data.56yhz.com/media/windows/1.jpeg)
+> 下载地址为：https://developer.android.google.cn/studio/
 
-- Open Android Studio, click project on the right - More Actions - SDK Manager - SDK Platforms, select Hide Obsolete Packages below
+- 一直next,第一次运行，需要安装SDK,全部选是即可
 
-> ![](https://data.56yhz.com/media/windows/2.jpeg)](Switch to SDK-TOOLS)
+> ![](https://www.56yhz.com/media/windows/1.jpeg)
 
-- Switch to SDK-TOOLS, select the one shown in the picture
+- 打开Android Studio,点击右边的project——More Actions——SDK Manager——SDK Platforms,选中下边的Hide Obsolete Packages
 
+> ![](https://www.56yhz.com/media/windows/2.jpeg)]
+(切换到SDK-TOOLS)
 
-> ![](https://data.56yhz.com/media/windows/3.jpeg)
+- 切换到SDK-TOOLS,选中图中所示
 
-- Then select Show Package Details on the right, select version 30, click Apply, wait for the download to complete, and then click OK
+> ![](https://www.56yhz.com/media/windows/3.jpeg)
 
-Download Gradle, and unzip it to another path after the download is complete
+- 再选中右方的Show Package Details，选中30版本的即可，点击Apply,等下载完成，再点确定
 
-> The download path is https://downloads.gradle-dn.com/distributions/gradle-4.10.3-all.zip
+下载Gradle，下载完成后解压到其他路径即可
 
-Environment variable configuration
-Create a system environment variable JAVA_HOME: the JDK installation path, the default path is as shown in the figure
+>下载路径为https://downloads.gradle-dn.com/distributions/gradle-4.10.3-all.zip
 
-> ![](https://img-blog.csdnimg.cn/3328a70f4a044fd6b82488363367919d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAbTBfNjE0MzExNzU=,size_70,FF_se,color_FF)
+环境变量配置
+创建系统环境变量JAVA_HOME:为JDK安装路径，默认路径即图中所示
 
-Create a system environment variable Gradle: the unzipped path of gradle-4.10.3-all.zip in the previous step
+> ![](https://img-blog.csdnimg.cn/3328a70f4a044fd6b82488363367919d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAbTBfNjE0MzExNzU=,size_20,color_FFFFFF,t_70,g_se,x_16)
 
+创建系统环境变量Gradle:为上一一步中gradle-4.10.3-all.zip解压后的路径
 
-> ![](https://data.56yhz.com/media/windows/4.jpeg)
+> ![](https://www.56yhz.com/media/windows/4.jpeg)
 
-Create system environment variables ANDROID_HOME and ANDROID_SDK_ROOT: for the installation path of the Android SDK
+创建系统环境变量ANDROID_HOME和ANDROID_SDK_ROOT:为Android SDK的安装路径
 
-> ![](https://data.56yhz.com/media/windows/5.jpeg)
+> ![](https://www.56yhz.com/media/windows/5.jpeg)
 
-Edit the environment variable PATH and add as shown
+编辑环境变量PATH，添加如图所示
 
-![](https://data.56yhz.com/media/windows/6.jpeg)
+![](https://www.56yhz.com/media/windows/6.jpeg)
 
-Verify that the Android environment is configured
-Check the environment by typing cordova requirements, if successful as follows:
+验证安卓环境是否配置完成
+输入 cordova requirements 检查环境，如果成功的话如下所示：
 
-![](https://data.56yhz.com/media/windows/7.jpeg)
+![](https://www.56yhz.com/media/windows/7.jpeg)
 
-Generate apk test environment (open USB debugging mode on mobile phone, connect to computer, select file mode or U disk mode)
+安装前端环境
+> npm install -g npm
+> npm config set registry https://registry.npm.taobao.org
+> npm install -g yarn
+> yarn config set registry https://registry.npm.taobao.org/
+> npm install -g @quasar/cli
+> npm install -g core-js
 
-- Execute quasar d -m cordova -T android in the templates directory under the project
+初始化环境
 
-> ![](https://data.56yhz.com/media/windows/9.jpeg)
+- 项目目录下执行yarn install
+
+生成apk测试环境(手机上打开USB调试模式，并且连接到电脑上，选择文件模式或者U盘模式)
+
+- 项目目录下执行quasar d -m cordova -T android
+
+> ![](https://www.56yhz.com/media/windows/9.jpeg)

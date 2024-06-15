@@ -1,44 +1,44 @@
-# Nginx configuration
+# Nginx配置
 
 ---
 
-### CentOS configuration
+ CentOS配置
 
-Install pre-dependencies
+安装前置依赖
 
 > yum -y install gcc-c++ zlib-devel openssl openssl-devel gd-devel
 
-Download nginx-1.14.1 source installation package
+下载nginx-1.14.1源码安装包
 
 > wget https://nginx.org/download/nginx-1.14.1.tar.gz
 
-Unzip and start compiling and installing
+解压并开始编译安装
 > tar zxvf nginx-1.14.1.tar.gz
 > cd nginx-1.14.1
 
-> ./configure --prefix=/usr/local/nginx --user=www --group=www --with-pcre --with-http_ssl_module --with-http_v2_module --with-http_realip_module --with-http_addition_module - -with-http_sub_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_random_index_module --with-http_secure_link_module --with-http_stub_status_module --with-http_auth_request_module - -with-http_image_filter_module --with-http_slice_module --with-mail --with-threads --with-file-aio --with-stream --with-mail_ssl_module --with-stream_ssl_module
+> ./configure --prefix=/usr/local/nginx --user=www --group=www --with-pcre  --with-http_ssl_module --with-http_v2_module --with-http_realip_module --with-http_addition_module --with-http_sub_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_random_index_module --with-http_secure_link_module --with-http_stub_status_module --with-http_auth_request_module --with-http_image_filter_module --with-http_slice_module --with-mail --with-threads --with-file-aio --with-stream --with-mail_ssl_module --with-stream_ssl_module
 
 > make && make install
 
-Configure soft links
+配置软链接
 > ln -s /usr/local/nginx/sbin/nginx /usr/bin/
 
-Check if the configuration file is normal
+检查配置文件是否正常
 
 > nginx -t
 
-show result
+显示结果
 
 > nginx: the configuration file /usr/local/nginx/conf/nginx.conf syntax is ok
 > nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
 
-start the service
+启动服务
 
 > nginx
 
-### Ubuntu Configuration
+### Ubuntu配置
 
-Install pre-dependencies
+安装前置依赖
 
 > sudo apt-get update
 > sudo apt-get install build-essential
@@ -47,114 +47,48 @@ Install pre-dependencies
 > sudo apt-get install zlib1g-dev
 > sudo apt-get install libssl-dev
 
-Download nginx-1.14.1 source installation package
+下载nginx-1.14.1源码安装包
 
 > wget https://nginx.org/download/nginx-1.14.1.tar.gz
 
-Unzip and start compiling and installing
+解压并开始编译安装
 
 > tar zxvf nginx-1.14.1.tar.gz
 > cd nginx-1.14.1
 
->./configure --prefix=/usr/local/nginx --user=www --group=www --with-pcre --with-http_ssl_module --with-http_v2_module --with-http_realip_module --with-http_addition_module - -with-http_sub_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_random_index_module --with-http_secure_link_module --with-http_stub_status_module --with-http_auth_request_module - -with-http_image_filter_module --with-http_slice_module --with-mail --with-threads --with-file-aio --with-stream --with-mail_ssl_module --with-stream_ssl_module
+>./configure --prefix=/usr/local/nginx --user=www --group=www --with-pcre  --with-http_ssl_module --with-http_v2_module --with-http_realip_module --with-http_addition_module --with-http_sub_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_random_index_module --with-http_secure_link_module --with-http_stub_status_module --with-http_auth_request_module --with-http_image_filter_module --with-http_slice_module --with-mail --with-threads --with-file-aio --with-stream --with-mail_ssl_module --with-stream_ssl_module
 
 > make && make install
 
-Configure soft links
+配置软链接
 
 > ln -s /usr/local/nginx/sbin/nginx /usr/bin/
 
-Check if the configuration file is normal
+检查配置文件是否正常
 
 > nginx -t
 
-show result
+显示结果
 
 > nginx: the configuration file /usr/local/nginx/conf/nginx.conf syntax is ok
 > nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
 
-start the service
+启动服务
 
 > nginx
 
-Description of service status
+服务状态描述
 
-> nginx -t //Check whether the configuration file contains syntax errors
-> nginx -s reload //Reload the configuration file without interrupting the service
-> killall nginx //Close the nginx service
+> nginx -t  //检测配置文件是否包含语法错误
+> nginx -s reload //重新加载配置文件,不会中断服务
+> killall nginx //关闭nginx服务
 
-LAN deployment
+局域网部署
 
-> find / -name nginx.conf
-> vim /usr/local/nginx/conf/nginx.conf //copy the following
+> find / -name nginx.conf 
+> vim /usr/local/nginx/conf/nginx.conf //复制以下内容
 
 ```shell
-user root;
-worker_processes auto;
-
-events {
-    worker_connections 1024;
-}
-
-http {
-    include mime.types;
-    default_type application/octet-stream;
-    sendfile on;
-    gzip on;
-    gzip_min_length 1k;
-    gzip_comp_level 4;
-    gzip_types text/plain application/javascript application/x-javascript text/javascript text/xml text/css;
-    gzip_disable "MSIE [1-6]\.";
-    gzip_vary on;
-proxy_redirect off;
-proxy_set_header Host $host;
-proxy_set_header https $https;
-proxy_set_header X-Real-IP $remote_addr;
-proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-client_max_body_size 75M;
-client_body_buffer_size 256k;
-client_header_timeout 3m;
-client_body_timeout 3m;
-send_timeout 3m;
-proxy_connect_timeout 300s;
-proxy_read_timeout 300s;
-proxy_send_timeout 300s;
-proxy_buffer_size 64k;
-proxy_buffers 4 32k;
-proxy_busy_buffers_size 64k;
-proxy_temp_file_write_size 64k;
-proxy_ignore_client_abort on;
-upstream GreaterWMS {
-server 127.0.0.1:8008;
-}
-server {
-listen 80;
-server_name 127.0.0.1;
-location / {
-#root html;
-#index testssl.html index.html index.htm;
-proxy_redirect off;
-proxy_set_header Host $host;
-proxy_set_header X-Real-IP $remote_addr;
-proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-proxy_pass http://GreaterWMS/;
-}
-location /static/ {
-alias /GreaterWMS/static_new/;
-}
-location /media/ {
-alias /GreaterWMS/media/;
-}
-}
-}
-````
-
-Production environment deployment
-
-> vim vim /usr/local/nginx/conf/nginx.conf
-
-
-~~~ shell
 user root;
 worker_processes auto;
 
@@ -163,15 +97,80 @@ events {
 }
 
 http {
-	include         mime.types;
-	default_type    application/octet-stream;
-	sendfile        on;
-	gzip            on;
-	gzip_min_length 1k;
-	gzip_comp_level 4;
-	gzip_types      text/plain application/javascript application/x-javascript text/javascript text/xml text/css;
-	gzip_disable    "MSIE [1-6]\.";
-	gzip_vary       on;
+    include         mime.types;
+    default_type    application/octet-stream;
+    sendfile        on;
+    gzip            on;
+    gzip_min_length 1k;
+    gzip_comp_level 4;
+    gzip_types      text/plain application/javascript application/x-javascript text/javascript text/xml text/css;
+    gzip_disable    "MSIE [1-6]\.";
+    gzip_vary       on;
+	proxy_redirect off;
+	proxy_set_header Host $host;
+	proxy_set_header  https $https;
+	proxy_set_header X-Real-IP $remote_addr;
+	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+	client_max_body_size 75M;
+	client_body_buffer_size 256k;
+	client_header_timeout 3m;
+	client_body_timeout 3m;
+	send_timeout 3m;
+	proxy_connect_timeout 300s;
+	proxy_read_timeout 300s;
+	proxy_send_timeout 300s;
+	proxy_buffer_size 64k;
+	proxy_buffers 4 32k;
+	proxy_busy_buffers_size 64k;
+	proxy_temp_file_write_size 64k;
+	proxy_ignore_client_abort on;
+	upstream GreaterWMS {
+		server 127.0.0.1:8008;
+	}
+	server {
+		listen      80;
+		server_name 127.0.0.1;
+		location / {
+			#root   html;
+			#index  testssl.html index.html index.htm;
+			proxy_redirect off;
+			proxy_set_header Host $host;
+			proxy_set_header X-Real-IP $remote_addr;
+			proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+			proxy_pass http://GreaterWMS/;
+		}
+		location /static/ {
+			alias /GreaterWMS/static_new/;
+		}
+		location /media/ {
+			alias /GreaterWMS/media/;
+		}
+	}
+}
+```
+
+生产环境部署
+
+> vim /usr/local/nginx/conf/nginx.conf
+
+```shell
+user root;
+worker_processes auto;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include         mime.types;
+    default_type    application/octet-stream;
+    sendfile        on;
+    gzip            on;
+    gzip_min_length 1k;
+    gzip_comp_level 4;
+    gzip_types      text/plain application/javascript application/x-javascript text/javascript text/xml text/css;
+    gzip_disable    "MSIE [1-6]\.";
+    gzip_vary       on;
 	proxy_redirect off;
 	proxy_set_header Host $host;
 	proxy_set_header  https $https;
@@ -241,4 +240,5 @@ http {
 			alias /path/to/GreaterWMS/media/;
 		}
 	}
-~~~
+}
+```

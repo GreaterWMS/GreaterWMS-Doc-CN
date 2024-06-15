@@ -1,105 +1,97 @@
 ---
 title: WCS | Warehouse Control System
 description: Warehouse Automation Software Solutions
-keywords: Warehouse Control System, control system, wcs, SCADA,scada,WCS, warehouse automation control system, automation control system, automation warehouse
+keywords: Warehouse Control System, control system, wcs, SCADA,scada,WCS, warehouse automation control system, automation control system, automation warehouse,自动化控制系统，仓库控制系统，自动化仓库
 ---
 
-# Warehouse Automation Software Solutions
+# 仓储自动化软件系统解决方案
 
 ------
 
-Intralogistics processes are becoming increasingly complex. In manual, automated and fully automated warehouses, countless processes must be monitored, observed and optimized, so expertise is required. As a professional logistics system provider, We provide professional consulting advice for your warehousing project, and work with your project team to build a warehouse automation software solution that meets your project needs.
+内部物流的流程正变得日趋复杂。在人工、自动化和全自动仓库中，必须对无数流程进行监控、观测和优化，因此需要具有这方面的专业知识。作为专业的物流系统供应商，我们为您的仓储项目提供专业的咨询建议，与您的项目团队通力协作共同构建满足您项目需要的仓储自动化软件系统解决方案。
 
-!!! success "* Warehouse Control System (WCS)"
-* Visualization SCADA
-* Navigation & Control based on Driverless Technology (In-plant Logistics Solutions)
-* Intralogistics Equipment Partner List...
-* Case Overview
+!!! info "* 仓库控制系统(WCS)"
+ * 可视化SCADA
+ * 基于无人驾驶技术的导航与控制-厂区物流解决方案
+ * 当前WCS系统支持的设备类型与合作厂商 （持续更新...)
+ * 案例概要
 
 ![overview_pic][1]{ loading=lazy }
 
-## Warehouse Control System (WCS)
+## 仓库控制系统(WCS)
 
-> [WCS](https://www.56yhz.com/contact_us/) system is a layer of management and control system between WMS system and equipments PLC system, through the control and scheduling of PLC and single-chip microcomputer of various equipment in the automated warehouse. Through the integration, unified scheduling and monitoring of various logistics equipment system interfaces. Such as stackers, conveyors, four-way shuttle robots, AGV, AMR, Hoists, depalletizers, sensors and scanners etc., as well as timely alarms and emergency treatment in case of abnormalities, so as to maintain the throughput of the entire warehouse automation system.
+> WCS系统是介于WMS系统和PLC系统之间的一层管理控制系统，通过对自动化仓库中各项设备的PLC、单片机的控制和调度，使堆垛机、输送线、智能四向穿梭机器人、AGV小车, 提升机、拆码垛机等各种物流设备统一集成调度和监控，优化设备运作效率，从而维持整个仓库自动化系统的吞吐量。
 
-## System Overview
+## WMS系统与WCS系统是如何协同工作
 ![system_overview][2]{ loading=lazy }
 
-> Clothoidy's technical team members have extensive experience in the logistics automation industry, and they come from the software development engineer team of the top three companies in the logistics automation industry. So let us know your logistics automation ideas or concerns, Our [WCS](https://www.56yhz.com/contact_us/) expert can be easily tailored to deliver a solution that best fits into your functional and performance requirements and your existing IT architecture.
+## WCS系统架构
+![system_architecture][3]{ loading=lazy }
+
+> 我们的[WCS](https://www.56yhz.com/contact_us/) 软件采用基于低耦合组件化的工程方法，因而可以轻松定制，提供最符合您的功能和性能要求以及现有 IT 架构的解决方案。
 
 ------
 
-### Key Points and Processes for Warehouse Automation Projects
+### 自动化仓库项目关键基点与流程
 
-- [x] Partnership built in trust and expertise
-    > Because software is the beating heart of your supply chain solution, your software partner must be able to solve your technical and business challenges. We have a dedicated team of experts that support customers throughout the transition from start to finish, providing guidance at every stage of the project cycle.
+- [x] 基于信任和专业的伙伴关系
+>软件是自动化仓储解决方案的重中之重，因此，您选择的软件合作伙伴必须有能力解决您面临的技术和业务挑战。我们拥有一支专业的专家团队，能够在整个转移过程中为客户提供帮助，为项目周期的每个阶段保驾护航。
+确保您的软件实施顺利进行是我们的技术专家的首要任务。我们与您的团队精诚合作，确保流程的各个阶段都能得到有效管理。  
+    凭借专业的经验，我们提供综合的软件解决方案，运用最新研发成果，确定您当前对于能够保证高峰运营效率的软件的需求，并为未来的需求制定计划，确保解决方案能够不断扩展，以满足增长目标。 
 
-    >Our technical experts' first priority is making your implementations run smoothly. We work in partnership with your teams to ensure that every stage of the process is managed effectively.  
+- [x] 实时与数据驱动
+> 我们与您一同合作，运用最新研发成果，确定您当前对于能够保证高峰运营效率的软件的需求，并为未来的需求制定计划。最终，我们开发出一个量身定制、灵活且可扩展的软件解决方案，可以充分利用您的空间、劳动力和设备，让您能够准确、准时地按预算交付订单。 
 
-    >We draw upon decades of experience to deliver complex software solutions that transform supply chains. Using the latest research and development, we work with you to identify your current software requirements for peak operational efficiency and plan for future requirements to ensure your supply chain solution will scale to meet growth targets. 
+- [x] 无缝实施
+>无论将什么新软件引入实时自动化，都是一项艰巨的任务，而当您的首要任务是防止新软件的实施对日常运营造成影响时，更是如此。其他关键考虑因素还包括对员工造成的潜在影响以及实施所需时间。 
+    我们使用从初始研发到实施完成的简单项目执行程序，将每个项目分成以下四个关键阶段： 
+    第 1 阶段 – 设计： 我们将审查您的系统需求和功能，为我们的技术团队提供有关您的运营的详细分析，包括软件功能和主机规格。这可以确保新软件能够优化您的系统，同时不中断流程。  
+    第 2 阶段 – 开发：我们的技术团队利用此详细分析设计软件包。接下来，我们将软件与关键组成部分（构成最终系统需求的一部分的可交付成果）结合，并在进入第 3 阶段之前对其进行进一步测试。 
+    第 3 阶段 – 测试或质量保证 (QA)：我们采用新-构建的软件解决方案，并将该方案集成到您的系统中。我们将继续进行测试，以确保新系统符合要求，并能以最佳性能运行。在这个阶段，我们的团队会尽己所能，最大限度地减少您的团队承担的内部工作和压力。 
+    第 4 阶段 – 部署： 我们确保系统分别在高峰和超高峰条件下正常运行，从而保证需求上升时的正常运营。部署过程中和验收完成之后，我们将继续提供支持。此阶段的主要目标是防止您正在进行的运营受到干扰。 
 
-- [x] Real-time and data-driven approach
-    > Using the latest research and development, We work with you to identify your current software requirements for peak operational efficiency and plan for future requirements to ensure your supply chain solution will scale to meet growth targets. 
+- [x] 可靠的全天侯售后服务
+>我们全年全天候待命，随时满足您的需求。我们具备相关资质的技术人员可以为您解答有关以下方面的软件问题：
+    解决问题（紧急或其他）
+    操作建议
+    现场资源调度
+    远程运维服务
 
-    > The result is a purpose-built, flexible, and scalable software solution that makes the best use of your space, labour, and equipment to get your orders out accurately, on-time, and on-budget. 
-    
-- [x] Seamless implementation
-    >Introducing any new software into a live supply chain can be daunting, especially when your top priority is limiting the implementation’s impact on day-to-day operations. Other key considerations include the potential impact on your staff and how long implementation will take. 
+## 可视化SCADA
+>[SCADA](https://www.56yhz.com/contact_us/)子系统能将您整个设备包括物料流可视化，分析性能关键数据，提供监测和控制的多种选项。借助可以针对不同用户群组调整的信息看板，统一了技术和物流视角的运营数据，同时与现有的系统可以高度衔接。
+![SCADA_viewer][4]{ loading=lazy }
+![SCADA_Monitor][5]{ loading=lazy }
 
-    >Using a simple project execution procedure that starts with research and development and completes with implementation, Dematic uses these four key stages on every project: 
+## 基于无人驾驶技术的导航与控制-厂区物流解决方案
+>适合多种行业与各种应用场景
+    快速、灵活部署，无需场地改造
+    载人级的无人驾驶核心技术，安全可靠
+    负载能力强，可全天候、长距离运作
+    系统化集成方案，支持定制化开发
+    全生命周期的运维保障服务
 
-    >Stage 1 – Design: We’ll review your system requirements and capabilities to provide our technical teams with a detailed analysis of your operations, including software functionality and host specifications. This ensures that your new software improves your systems without interrupting your processes.  
+- [x] 提供无人驾驶域控制器、调度控制系统
+- [x] 协助客户进行车辆改装-可选包
+- [x] 现场安装与实施-可选包
 
-    >Stage 2 – Develop: Using this detailed analysis, our technical teams design the software package. Next, we marry the software with key components (deliverables that form part of the end system requirements), which we further test before heading into stage 3. 
-    
-    >Stage 3 – Test or QA: We take the newly- built software solution and integrate it into your system. We continue to perform tests to ensure that the new system is accepted and running at optimal performance. At this stage, our team does all it can to minimise internal efforts and stress on your team.
-    
-    >Stage 4 – Deploy: We ensure the system operates when running at and above peak conditions to guarantee operations when demand rises. We continue to provide support through deployment and after signoff. The key objective at this stage is to safeguard against interruptions to your ongoing operations. 
+![L4_Driver][6]{ loading=lazy }
 
-- [x] Reliable 24/7 customer service
-    >Our software support team is ready when you need us — 24/7, 365 days a year. Our qualified technicians are available to answer your software questions regarding:
+## 当前WCS系统支持的设备类型与合作厂商 （持续更新...)
+>当前我们的WCS系统已经涵盖了主流内部物流设备供应商的设备。 比如存储系统 (托盘堆垛机SRM, MiniLoad, 多层/四向穿梭车等), 搬运系统(AGV, AMR, ACR，输送和分拣线). 分拣(货到人, 灯光拣选等.)
 
-    >Problem Solving (Emergency or Otherwise)
-    >Operation Advice
-    >Scheduling Onsite Resources
-    >...and More!
+![wcs_equipment_overview][7]{ loading=lazy }
 
-## Visualization SCADA
->[SCADA](https://www.56yhz.com/contact_us/) subsystems visualize your entire equipment, including material flow, analyze performance-critical data, and provide multiple options for monitoring and control. With dashboards that can be adapted to different user groups, operational data from a technical and logistics perspective is unified, while being highly connected to existing systems.
+欢迎您的咨询，我们的[WCS](https://www.56yhz.com/contact_us/)专家将就您提供的信息告知您更多细节。
 
-![SCADA_viewer][3]{ loading=lazy }
-![SCADA_Monitor][4]{ loading=lazy }
-
-## Navigation & Control based on Driverless Technology (In-plant Logistics Solutions)
-> Suitable for a variety of industries and various application scenarios
-Fast, flexible deployment without site modifications
-Manned unmanned core technology, safe and reliable
-Strong load capacity, can operate around the clock, long distance
-Systematic integration solution to support customized development
-Full lifecycle O&M support services
-
-- [x] Provide driverless domain controllers, software systems
-- [x] Assistance with customer vehicle modification - optional package
-- [x] Field installation and implementation - optional package
-
-![L4_Driver][5]{ loading=lazy }
-
-##  Intralogistics Equipment Partner List...
->At present, our WCS system covers most of the equipment types of major intralogistics suppliers. For example, Storage Systems (SRM, MiniLoad AS/RS, Shuttles, etc.), Transport Systems(AGV, AMR, ACR，Conveyors and Sorters）. Picking Systems (goods-to-person picking, PTL and etc.)
-
-![wcs_equipment_overview][6]{ loading=lazy }
-
-Welcome your inquiry and our [WCS]（https://www.56yhz.com/contact_us/）expert will inform you of more details based on the information you provided. 
-
-## Case Overview
-> SAIC-GM-Wuling plant uses our solutions for 100+ driverless logistics vehicles
-![case1][7]{ loading=lazy }
+## 案例 
+![case1][8]{ loading=lazy }
 
 
 [1]: assets/images/warehouse_overview.png
-[1]: assets/images/system_overview_en.png
-[3]: assets/images/shutterstock.webp
-[4]: assets/images/SCADA.jpg
-[5]: assets/images/L4_scene_en.png
-[6]: assets/images/wcs_equipment_overview.jpg
-[7]: assets/images/case_en.png
+[2]: assets/images/system_overview_zh.png
+[3]: assets/images/system_architecture_zh.png
+[4]: assets/images/shutterstock.webp
+[5]: assets/images/SCADA.jpg
+[6]: assets/images/L4_scene_zh.png
+[7]: assets/images/wcs_equipment_overview.jpg
+[8]: assets/images/case_zh.png

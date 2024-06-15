@@ -2,5 +2,4 @@
 title: GreaterWMS
 template: home.html
 ---
-
-Intuitive Inventory Management
+法语

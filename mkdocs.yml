@@ -46,10 +46,11 @@ theme:
     code: Roboto Mono
   favicon: assets/favicon.png
   logo: assets/logo.png
-  language: en
+  language: zh
 
 # Plugins
 plugins:
+  - offline
   - search:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - minify:
@@ -58,45 +59,6 @@ plugins:
       minify_css: true
       cache_safe: true
   - glightbox
-#  - i18n:
-#      default_language: en
-#      material_alternate: true
-#      languages:
-#        en:
-#          name: English
-#          build: true
-#        zh:
-#          name: 中文简体
-#          build: true
-#      nav_translations:
-#        zh:
-#          Home: 主页
-#          Guide: 指南
-#          Why GreaterWMS: 为什么选择我们
-#          Sponsors and Supporters: 赞助商和支持者
-#          Why Donate?: 为什么捐助很重要
-#          Please Don't Do That: 不要做这些
-#          Deploy: 部署文档
-#          Software Version Requirements: 软件版本要求
-#          Server Configuration Recommendations: 服务器要求
-#          Win10 X64: Win10 X64
-#          Centos 7 64-bit Deployment: Centos 7 部署
-#          Ubuntu20 X64: Ubuntu 20 部署
-#          Android Environment: 安卓环境搭建
-#          IOS Environment: IOS环境搭建
-#          Android Apk Signature: 安卓APK签名
-#          Supervisor Process Guarded: Supervisor守护进程
-#          Nginx Config: Nginx反向代理
-#          Electron APP: Electron构建
-#          Executive Summary: 命令集合
-#          Docker deployment: Docker部署
-#          Product: 产品线
-#          GreaterWMS: GreaterWMS
-#          DVadmin: DVadmin
-#          WCS: WCS
-#          Case: 成功案例
-#          Contact: 联系我们
-#          Contact US: 联系方式
 
 # Hooks
 hooks:
@@ -180,26 +142,25 @@ not_in_nav: |
 
 # Page tree
 nav:
-  - Home: index.md
-  - Guide:
-    - Why GreaterWMS: why_greaterwms.md
-    - Sponsors and Supporters: sponsors_and_supporters.md
-    - Why Donate?: why_donate.md
-    - Please Don't Do That: please_dont_do_that.md
-  - Deploy:
-    - Software Version Requirements: software_version_requirements.md
-    - Server Configuration Recommendations: server_configuration_recommendations.md
+  - 主页: index.md
+  - 指南:
+    - 为什么选择我们: why_greaterwms.md
+    - 赞助商和支持者: sponsors_and_supporters.md
+    - 为什么捐助很重要: why_donate.md
+    - 不要做这些: please_dont_do_that.md
+  - 部署文档:
+    - 软件版本要求: software_version_requirements.md
+    - 服务器要求: server_configuration_recommendations.md
     - Win10 X64: win_10.md
-    - Centos 7 64-bit Deployment: centos_7.md
-    - Ubuntu20 X64: ubuntu_20.md
-    - Android Environment: android_environment.md
-    - IOS Environment: ios_environment.md
-    - Android Apk Signature: android_apk_signature.md
-    - Supervisor Process Guarded: supervisor_process_guarded.md
-    - Nginx Config: nginx_config.md
-    - Electron APP: electron_app.md
-    - Executive Summary: executive_summary.md
-    - Docker deployment: docker_deployment.md
-  - Product:
+    - Centos 7 部署: centos_7.md
+    - Ubuntu 20 部署: ubuntu_20.md
+    - 安卓环境搭建: android_environment.md
+    - IOS环境搭建: ios_environment.md
+    - 安卓APK签名: android_apk_signature.md
+    - Supervisor守护进程: supervisor_process_guarded.md
+    - Nginx反向代理: nginx_config.md
+    - 命令集合: executive_summary.md
+    - Docker部署: docker_deployment.md
+  - 产品线:
     - GreaterWMS: greaterwms.md
     - WCS: wcs.md

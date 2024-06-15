@@ -1,22 +1,26 @@
+# 赞助商和支持者
 
+---
 
-!!! info "Author of GreaterWMS"
-    I have worked in the supply chain industry for 15 years and found that in our professional field, there is no software with a high degree of freedom and customization to deeply support our business. Most software is closed source, and it is difficult to do secondary development. Even if it is developed, the cycle is very long, and there are many cases of development failure. Since an enterprise chooses a software, its secondary development will also be bound by the development company. As for the secondary development cost, there is no room for bargaining. Therefore, I designed this GreaterWMS, in order to achieve a high degree of freedom, high custom development of warehouse management software, to deeply support the business of enterprises.
-    
-    Vision: If you are working in a non-IT industry and you love your industry, then use technology to change it.
-    
-    Elvis Shi, Sunday, June 26, 2016
+> GreaterWMS的作者
+> 
+> 我在供应链行业工作了15年，发现在我们这个专业的领域，没有一款高自由度、高自定义化的软件，来深度支持我们企业的业务。大多数软件都是闭源的，而且很难去做二次开发，即使开发，周期也是非常长，开发失败的案例也是比比皆是。由于企业选择了一款软件后，其二次开发也会被开发公司绑定，至于二次开发费用，也没有议价空间。所以，我设计了这个GreaterWMS，为的是做到一款高自由度，高自定义开发的仓库管理软件，来深度支持企业的业务。
+> 
+> 愿景：如果你从事着非IT行业的工作，而你又热爱你的行业，那就用科技去改变他。
+> 
+> Elvis Shi, 2016年6月26日星期日
+> 
 
-Like most open source products, GreaterWMS cannot do this alone. We rely on sponsors, advocates and supporters to keep growing. When GreaterWSM starts to bring you some business stability, take into account the tens of thousands of hours it was created and give some money back to the team that created it. Finally, if your company relies on GreaterWMS, the best way to ensure GreaterWMS continues to serve you is to invest in it to keep it going!
+像大多数开源产品一样，GreaterWMS不能单独做到这一点。我们依靠赞助商、拥护者和支持者来保持发展。当GreaterWSM开始为您带来一些业务稳定性时，请考虑到其创建的数万小时，并将一些资金返还给创造它的团队。最后，如果您的公司依赖GreaterWMS，保证GreaterWMS继续为您服务的最佳方式是投资它以维持它的发展！
 
-Please read our manifesto [Why Giving Matters](https://www.56yhz.com/tutorials/tutorialsdetail/70).
+请阅读我们的宣言[为什么捐赠很重要](https://www.56yhz.com/tutorials/tutorialsdetail/6).
 
-donate
+捐赠
 
-***
+---
 
-You can contact by email
+您可以通过邮箱联系
 elvis.shi@56yhz.com
-Make a donation.
+进行捐赠。
 
-All donations are for GreaterWMS development purposes only.
+所有捐款仅用于GreaterWMS开发目的。

@@ -1,157 +1,164 @@
-# Windows 10 64-bit deployment
+# Windows 10 64位 部署
 
 ---
 
-Download python3.9.5 (the version is mainly based on your own computer system, we take 64-bit as an example)
+下载python3.9.5(版本以自己电脑系统为主，我们以64位为例)
 > https://www.python.org/ftp/python/3.9.5/python-3.9.5-amd64.exe
 
-- Right click, run the exe file as administrator, install python3.9.5
-- Be sure to check Add Python3.9 To PATH, then click Install Now
+- 右键，以管理员运行exe文件，安装python3.9.5
+- 注意一定要勾选上Add Python3.9 To PATH,然后点选Install Now
 
-pip set permanent Alibaba cloud mirror source
-> Go to the following address:
-> C:\Users\{your username}\AppData\Roaming\ create a new pip folder
-Create a file pip.ini in the pip folder and add the following:
->>
+pip设置永久阿里云镜像源
+>进入以下地址：
+> C:\Users\{你的用户名}\AppData\Roaming\ 新建pip文件夹
+在pip文件夹下创建文件pip.ini,添加以下内容:
+>> 
 >> [global]
->> trusted-host = mirrors.aliyun.com
+>> trusted-host =  mirrors.aliyun.com
 >> index-url = https://mirrors.aliyun.com/pypi/simple
 >>
->Add system environment variable %HOME%\pip\pip.ini
+>添加系统环境变量 %HOME%\pip\pip.ini
 
-Download sqlite3 (the version is mainly based on your own computer system, we take 64-bit as an example)
+下载sqlite3(版本以自己电脑系统为主，我们以64位为例)
 
 > https://www.sqlite.org/2021/sqlite-dll-win64-x64-3350500.zip
 
-- Unzip the zip file, and the unzipped file will overwrite the file in the python path dll, the address is
-~ C:\Users\{your username}\AppData\Local\Programs\Python\Python39\DLLs
+- 解压zip文件，将解压出来的文件，覆盖python路径dll中的文件，地址为
+~ C:\Users\{你的用户名}\AppData\Local\Programs\Python\Python39\DLLs
 
 
-Download Node.JS14.18.3 (the version is mainly based on your own computer system, we take 64-bit as an example)
+下载Node.JS14.18.3(版本以自己电脑系统为主，我们以64位为例)
 > https://nodejs.org/dist/v14.18.3/node-v14.18.3-x64.msi
 
-Download Git (the version is mainly based on your own computer system, we take 64-bit as an example, you need to download the 64-bit version)
+下载Git(版本以自己电脑系统为主，我们以64位为例，需要下载64-bit版本的)
 > https://registry.npmmirror.com/binary.html?path=git-for-windows/
 
-- Right click, run the exe file as an administrator, and then go to the next step
-- Select which directory you want to put GreaterWMS in, right-click and select Git Bash Here
+- 右键，以管理员运行exe文件，然后一直下一步就可以了
+- 选择好你要把GreaterWMS摆在哪个目录中，右键，选择Git Bash Here
 
-Download GreaterWMS code from gitee
+下载 GreaterWMS 代码，从 gitee上下载
 > git clone https://gitee.com/Singosgu/GreaterWMS.git
-- In the search bar in the lower left corner, enter cmd
-- Right click and run cmd as administrator
-- View Python version
+- 左下角搜索栏，输入cmd
+- 右键，以管理员运行cmd
+- 查看Python版本
 
 > python -V
 
-- Check if pip is installed
+- 查看pip有没有装好
 > pip list
 
-Upgrade pip to the latest version
+升级pip到最新版本
 > pip install --upgrade pip
 
-Enter the GreaterWMS placement directory, which is placed in downlowad during the demo, so we go into the directory
-~ cd C:\Users\{your username}\Downloads\GreaterWMS\
+进入GreaterWMS摆放目录，演示时摆在downlowad里面的，所以我们进去目录
+~  cd C:\Users\{你的用户名}\Downloads\GreaterWMS\
 
 
-pip install python dependency library
+pip安装python依赖库
 > pip install -r requirements.txt
 
-Twisted may not be installed, you need to download it and install it manually
+Twisted可能安装不上，需要下载下来手动安装
 
 > https://www.lfd.uci.edu/~gohlke/pythonlibs/#twisted
 
-- Download your own suitable version, for example: my demo video is Python3.9.5, and the Win10 version is 64-bit
-- So I'm going to download Twisted-20.3.0-cp39-cp39-win_amd64.whl
-- Place the downloaded Twisted in the root directory of GreaterWMS and install it manually
+- 下载自己适合的版本，比如：我的演示视频是Python3.9.5，Win10版本是64位的
+- 所以我就要下载Twisted-20.3.0-cp39-cp39-win_amd64.whl
+- 将下载下来的Twisted摆在GreaterWMS根目录，手动安装
 
 > pip install Twisted-20.3.0-cp39-cp39-win_amd64.whl
 
-run install requirements.txt
+运行安装requirements.txt
 > pip install -r requirements.txt
 
-Start GreaterWMS
+启动GreaterWMS
 > daphne -p 8008 greaterwms.asgi:application
 
-- Now open the browser and enter 127.0.0.1:8008
-- If you see an error of 500, it means that all previous Python dependencies have been installed
+- 这时候打开浏览器，输入127.0.0.1:8008
+- 如果看到500报错，就说明之前的Python依赖已经全部安装完成了
 
 
-Go back to the CMD interface, hold down Ctrl+C to exit the project startup
-Generate database migration files
+回到CMD界面，按住Ctrl+C来退出项目启动
+生成数据库迁移文件
 
 > python manage.py makemigrations
 
-Generate database
+生成数据库
 
 > python manage.py migrate
 
-- start the project again
+- 再次启动项目
 > daphne -p 8008 greaterwms.asgi:application
 
-- Now open the browser and enter 127.0.0.1:8008
-- View LAN IP, browser input 127.0.0.1:8008/myip
-- Save or remember this IP address
-- It must be noted that the intranet IP obtained by windows is different every time you start up. Either you set a fixed intranet IP to this computer on your router, or you don't turn off the computer.
+- 这时候打开浏览器，输入127.0.0.1:8008
+- 查看局域网IP，浏览器输入127.0.0.1:8008/myip
+- 保存或者记住这个IP地址
+- 一定注意，windows每次启动获得的内网IP是不同的，要么你路由器设置固定内网IP给这台电脑，要么你就不要关电脑
 
-Go back to the CMD interface, hold down Ctrl+C to exit the project startup
-Go to the templates directory
+回到CMD界面，按住Ctrl+C来退出项目启动
+进入templates目录
 
 > cd templates
 
-- Since version 2.0.19, the modification method of the request address has been optimized. By directly modifying the baseurl and wsurl in templates/dist/spa/statics/baseurl.js, you can successfully change the front-end request address, and you no longer need to do the following quasar build packaging works. If you need to modify the front-end content, you also need to modify the baseurl and wsurl in templates/public/statics/baseurl.js, and then re-use quasar build for packaging
+- 从2.0.19版本以后，优化了请求地址修改方式，直接修改templates/dist/spa/statics/baseurl.js，中的baseurl和wsurl，就可以成功更改前端请求地址，不再需要做下面的quasar build打包工作。如果需要修改前端内容，则还需要修改templates/public/statics/baseurl.js中的baseurl和wsurl，然后重新使用quasar build进行打包
 
-upgrade npm
+升级下npm
 
 > npm install -g npm
 
-Install Yarn
+- 切换npm源为国内源
+
+> npm config set registry https://registry.npm.taobao.org
+
+安装Yarn
 > npm install -g yarn
 
+- 更改yarn为国内源
 
-Install the quasar environment
+> yarn config set registry https://registry.npm.taobao.org/
+
+安装quasar环境
 
 > npm install -g @quasar/cli
 
-Install the windows build tools Note: If you can't install it, please download Visual Studio to install the C++ environment
+安装windows构建工具 注意：如果安装不上请下载 Visual Studio 安装C++环境
 
 > npm install -g windows-build-tools
 
-Install core-js dependencies
+安装core-js依赖
 
 > npm install -g core-js
 
-Check if global dependencies are installed
+查看全局依赖是否安装完成
 
 > npm list -g --depth=0
 
-Install project dependencies
+安装项目依赖
 > yarn install
 
-- This process will be a bit slow, sometimes very fast, because the network is blocked
-- If an error occurs, it is blocked due to network reasons. We provide a downloaded front-end dependency, and you can download it.
+- 这个过程会有点慢，有时候会很快，是因为网络原因被墙了
+- 如果发生报错，那是因为网络原因被墙了，我们提供一个下载好的前端依赖端，下载下来就可以了
 
-Download front-end dependencies
+下载前端依赖库
 
 > git clone https://gitee.com/cow111023/node_modules.git
 
-If it is a LAN deployment, change 127.0.0.1 to the intranet IP you just checked
+如果是局域网部署，将127.0.0.1更改为你刚才查看到的内网IP
 
 > const baseurl = 'http://127.0.0.1:8008/'
 > const wsurl = 'ws://127.0.0.1:8008/'
 
-- save and exit
+- 保存退出
 
-Recompile the front end in the templates directory
+templates目录下重新编译前端
 > quasar build
 
-Go back to the GreaterWMS root directory
+回到GreaterWMS根目录
 
 
 > cd ..
 
-Add the -b 0.0.0.0 parameter to the startup project
+启动项目加入-b 0.0.0.0参数
 > daphne -b 0.0.0.0 -p 8008 greaterwms.asgi:application
 
-- Next, you can use your browser to visit { http://intranet IP:8008 } to view the project
-- Computers on the LAN can also access the project through this IP
+- 接下来就可以使用你的浏览器，访问{ http://内网IP:8008 }来查看该项目了
+- 局域网上的电脑也可以通过这个IP来访问项目

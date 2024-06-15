@@ -1,58 +1,61 @@
+# 为什么捐赠?
 
-- GreaterWMS is an APL2 licensed open source project maintained by Elvis Shi and his team and a community of open source contributors. We create new features, fix bugs, and maintain GreaterWMS on behalf of the community so you can continue to develop your own projects. We're working hard to shape the future of the warehouse management ecosystem, writing code once and deploying it as a web app, mobile app, and/or Electron app.
+---
 
-- Like most open source products, GreaterWMS cannot do this alone. We rely on sponsors, advocates and supporters to keep growing. When GreaterWMS starts to bring you some enterprise business stability, take into account the tens of thousands of hours it was created and give some money back to the team that created it. Finally, if your company relies on GreaterWMS, the best way to ensure GreaterWMS continues to serve you is to invest in it to keep it going!
+- GreaterWMS是由Elvis Shi及其团队和开源贡献者社区维护的APL2许可的开源项目。 我们代表社区创建新功能、修复错误并维护GreaterWMS，以便您可以继续开发自己的项目。 我们正在努力塑造仓库管理生态系统的未来，编写代码一次，同时将其部署为Web应用、移动应用和/或Electron应用。
 
-## Our manifesto
+- 像大多数开源产品一样，GreaterWMS不能单独做到这一点。我们依靠赞助商、拥护者和支持者来保持发展。当GreaterWMS开始为您带来一些企业业务稳定性时，请考虑到其创建的数万小时，并将一些资金返还给创造它的团队。最后，如果您的公司依赖GreaterWMS，保证GreaterWMS继续为您服务的最佳方式是投资它以维持它的发展！
+
+## 我们的宣言
 
 ---
 
 
-- The dream of open source is a noble cause that allows the community to grow and the code to be nurtured. Based on the philosophy of free and open source, GreaterWMS is committed to the principles of Good Labs.
+- 开源的梦想是一个崇高的事业，它使得社区成长, 代码得以培育。 根据自由开源的理念，GreaterWMS致力于Good Labs的原则 。
 
-- GreaterWMS is always free and open source, it's a self-governing place where everyone who follows the rules of the community is invited and encouraged to participate.
-
----
-
-## Participation is a form of collaborative appreciation
-- A lot of open source projects, like GreaterWMS and Vue.js, are developed by people who work on behalf of their communities on their own time, with no need for financial compensation. This "code ownership" is actually a very important issue as the owner decides how to go further.
-
-- So who are these people? They, like you, needed a certain feature and found an open source solution like Quasar. They are the people who use the software and decide to contribute by helping to improve it.
-
-- Maybe they are passionate about coding and want the project to use their talents. There are many reasons to engage in a community around an open source project. But most people have one thing in common:
-
-> They find free time in their busy schedules of work, family and commitment to get involved because it makes them feel like they can be part of a larger cause (more than an individual).
-
-- To give you some perspective, the lead developer and core maintainer of GreaterWMS [Elvis Shi](https://github.com/Singosgu) in the development phase of 1.0.0-alpha.1 to 1.0.0-rc.1 Spent over 5000 hours. During this time he logged over 3000 commits and added 400,000 lines of code.
-
-- The rest of the team and all staff communicating the support line and fixing the code remain (as of March 2021) working countless hours as unpaid volunteers. They are becoming increasingly accountable to project units and are a valuable resource for the communities we must protect.
+- GreaterWMS始终是免费开源的，这是一个自我管理的地方，每个遵守社区规则的人都会被邀请并被鼓励参与。
 
 ---
 
-## Financial sponsorship to guarantee maintenance
-- Nothing is certain, except that "node_modules" is still the heaviest thing in the universe, and at some point will need regular financial support to guarantee the maintenance of large open source projects. [References](https://github.com/sfosc/sfosc/issues/65#issuecomment-491770533).
+## 参与是一种协作欣赏形式
+- 很多开源项目，如GreaterWMS和Vue.js，都是由那些用自己的时间代表他们社区工作的人开发的，没有经济补偿的需求。这种“代码所有权”实际上是一个非常重要的问题，因为拥有者决定如何进一步发展。
 
-- Now that GreaterWMS is at this point, your support will make a difference.
+- 那么这些人是谁？他们就像你一样，需要一定的功能，并找到了像Quasar这样的开源解决方案。他们是使用该软件的人，并决定通过帮助改进它来做出贡献。
 
-- If your business relies on open source, you can hedge the risk of it disappearing with financial support so you can rest assured that the software will continue to be available to you.
+- 可能他们对编码充满热情，并希望项目能够发挥他们的才能。围绕开源项目参与社区的原因有很多。但大多数人有一个共同点：
 
-- Contrary to long-term licensing contracts for proprietary software, this model works because you encourage innovation, help the next generation of developers grow, and implicitly authorize to participate in discussions about the features you need and the problems you find.
+> 他们在繁忙的工作、家庭和承诺安排中找到空闲时间，以便参与，因为这使他们感觉自己能够成为更大事业(超过个人）的一份子。
 
-- If open source is financially viable for those developing the project, more people will get involved. If these developers can earn enough income to support themselves, they are more likely to stay involved.
+- 为了给你一些看法，GreaterWMS的首席开发人员和核心维护者[Elvis Shi](https://github.com/Singosgu)在1.0.0-alpha.1至 1.0.0-rc.1的开发阶段花费了5000多个小时。 在此期间他记录了超过3000次提交，并添加了40万行代码。
 
-> Financial support for open source literally means that the person developing the project has another reason to stick with it.
-
-- Many promising open source projects turn into "abandoned software" because the original developers have lost momentum. The maintenance phase is actually where many open source projects die. Money is a great community feedback that says "Keep it up and keep maintaining this project! We need you!!!"
+- 团队的其他成员和所有沟通支持线和修复代码的工作人员仍然是（截至2021年3月）工作无数小时无薪志愿者。 他们正在逐渐对项目单元负责，并且是我们必须保护的社区的宝贵资源。
 
 ---
 
-## what do you get from it
-- If you support open source, you will be part of the community. It's a large community, but often tight-knit. Your support shows that you believe in community, which makes you part of the family. If enough financial support comes together, it could also mean that core developers and maintainers can work full-time without needing to work elsewhere. This in turn promotes an environment where they are able to process fixes and requests faster than they would on a "hobby" basis.
+## 财务赞助以保证维护
+- 没有什么是确定的，除了“node_modules”仍然是宇宙中最重的东西，并且在某个时刻需要定期的财政支持以保证大型开源项目的维护。[参考文献](https://github.com/sfosc/sfosc/issues/65#issuecomment-491770533)。
 
-- So maybe you're a business that uses open source software to give yourself a competitive advantage, increase profits, or simply solve problems that other software can't. Maybe you're an individual using open source solutions and you can't afford expensive enterprise software. Like this example.
+- 现在GreaterWMS正在这个时间点，你的支持将有所作为。
 
-- Or you realize that millions of lines of code are lines you don't have to write, just thanks for the effort behind it.
+- 如果您的业务依赖于开源，您可以通过财务支持来对冲它消失的风险，以便您可以放心，该软件将继续为您提供。
 
-- Whatever open source software you use, think about the people who have spent a long time developing it and getting it to work for you.
+- 与专有软件的长期许可合同相反，此模型之所以有效是因为您鼓励创新，帮助下一代开发人员成长，并且隐含授权参与有关您需要的功能和您发现的问题的讨论。
 
-- Even a small donation can have a huge impact on them, especially since it means someone will be very grateful to them and let them know.
+- 如果开源对于那些开发项目的人来说具有经济可行性，那么更多人将参与其中。如果这些开发人员能够获得足够的收入来支持自己，他们更有可能保持参与。
+
+> 开源的财务支持字面上意味着开发项目的人有另外的理由坚持下去。
+
+- 许多有前途的开源项目变成了“放弃软件”，因为最初的开发人员已经失去了动力。 维护阶段实际上是许多开源项目死亡的地方。 金钱是一种很好的社区反馈，它说“坚持下去并继续维护这个项目！我们需要你!!!”
+
+---
+
+## 你从中获得了什么
+- 如果您支持开源，您将成为社区的一员。 这是一个庞大的社区，但往往紧密结合。 您的支持表明您相信社区，这使您成为家庭的一部分。 如果足够的财务支持汇集在一起，也可能意味着核心开发人员和维护人员能够全职工作而不需要在其他地方工作。 这反过来又促进了一个环境，在这个环境中，他们能够比在“业余爱好”的基础上更快地处理修复和请求。
+
+- 因此，也许您是一家使用开源软件为自己提供竞争优势、提高利润或简单解决其他软件无法解决的问题的企业。 也许你是一个使用开源解决方案的个人，你无法承受昂贵的企业软件。就像这个例子。
+
+- 或者您认识到数百万行代码是您不必编写的行，仅仅只是感谢这背后的努力。
+
+- 无论您使用什么样的开源软件，都要想到那些花了很长时间开发它并让它为您运行的人。
+
+- 即使是一笔小额捐款也可能对他们产生巨大的影响，尤其是因为这意味着有人会非常感激他们并让他们知道。

@@ -1,9 +1,12 @@
+# 服务器推荐
+
+---
 
 | Option | Description |
 | ------| -----------:|
-| Rack Server | 1U or 2U |
+| 机架式服务器   | 1U或者2U |
 | CPU | E5-2609 |
-| Memory | 16G |
-|HDD|2 SAS 15K to 300G hard drives, or 1 7200 to 1TB hard drive|
-|NIC|Dual Gigabit NIC|
-|Operating System|Centos7 or Ubuntu20|
+| 内存    | 16G |
+|硬盘|2块SAS 15K转300G硬盘，或者1块7200转1TB硬盘|
+|网卡|双千兆网卡|
+|操作系统|Centos7 或者 Ubuntu20|[server_configuration_recommendations.md](server_configuration_recommendations.md)
