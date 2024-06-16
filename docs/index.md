@@ -2,4 +2,5 @@
 title: GreaterWMS
 template: home.html
 ---
-法语
+
+GreaterWMS 库存管理系统
