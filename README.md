@@ -1,27 +1,30 @@
 
-Install
+下载
+~~~git
+git clone https://github.com/GreaterWMS/GreaterWMS-Doc-EN.git
+~~~
 
+安装
 ~~~python
 pip install -r requirements.txt
 ~~~
 
-Start
-
+启动
 ~~~python
 mkdocs serve
 ~~~
 
-Lan Start
+局域网启动
 ~~~shell
 mkdocs serve --dev-addr 0.0.0.0:8009
 ~~~
 
-MarkDown Folder
+MarkDown摆放位置
 ~~~shell
 material/overrides
 ~~~
 
-Image
+图片位置
 ~~~shell
 docs/assets/images/
 ~~~
