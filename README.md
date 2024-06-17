@@ -28,3 +28,8 @@ material/overrides
 ~~~shell
 docs/assets/images/
 ~~~
+
+新增Url
+~~~shell
+mkdocs.yml文件中，修改nav
+~~~
