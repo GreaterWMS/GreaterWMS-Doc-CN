@@ -1,7 +1,7 @@
 
 下载
 ~~~git
-git clone https://github.com/GreaterWMS/GreaterWMS-Doc-EN.git
+git clone https://github.com/GreaterWMS/GreaterWMS-Doc-CN.git
 ~~~
 
 安装
